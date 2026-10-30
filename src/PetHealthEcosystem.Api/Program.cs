@@ -232,7 +232,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Rota de boas-vindas - somente GET em /wellcome (alterar a mensagem para demonstrar o CI/CD)
+// Rota de boas-vindas - somente GET em /wellcome
 app.MapGet("/wellcome", () => Results.Text("PetHealthEcosystem API - Sprint 4 DevOps"))
    .WithName("Wellcome")
    .WithTags("Health")

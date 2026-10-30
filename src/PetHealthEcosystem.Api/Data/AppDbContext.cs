@@ -11,7 +11,7 @@ namespace PetHealthEcosystem.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Mapeamento da entidade (5 pts)
+            // Mapeamento da entidade Pet
             modelBuilder.Entity<Pet>().ToTable("PETS");
             modelBuilder.Entity<Pet>().HasKey(p => p.Id);
             modelBuilder.Entity<Pet>().Property(p => p.Name).IsRequired().HasMaxLength(100);
