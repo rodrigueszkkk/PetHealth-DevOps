@@ -99,7 +99,7 @@
   <ellipse cx="1080" cy="470" rx="34" ry="11" fill="#cfe6fa" stroke="#0078d4"/>
   <path d="M1046,470 v50 a34,11 0 0 0 68,0 v-50" fill="#cfe6fa" stroke="#0078d4"/>
   <text x="1230" y="466" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Azure SQL Database</text>
-  <text x="1230" y="486" text-anchor="middle" font-size="12" fill="#4b5563">PaaS · sql-pethealth-564578</text>
+  <text x="1230" y="486" text-anchor="middle" font-size="12" fill="#4b5563">PaaS · sql-pethealth-db-564578</text>
   <text x="1230" y="506" text-anchor="middle" font-size="12" fill="#4b5563">banco PetHealthDb</text>
   <text x="1230" y="526" text-anchor="middle" font-size="12" fill="#4b5563">tabela PETS</text>
   <text x="1175" y="556" text-anchor="middle" font-size="11" fill="#4b5563">firewall: serviços Azure + IP do desenvolvedor</text>

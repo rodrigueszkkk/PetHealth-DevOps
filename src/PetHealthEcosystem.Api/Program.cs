@@ -187,7 +187,9 @@ else
 healthChecksBuilder.AddUrlGroup(
     new Uri("https://api.github.com"),
     name: "external-service",
-    tags: new[] { "external", "ready" });
+    tags: new[] { "external", "ready" },
+    // A API do GitHub recusa (403) requisições sem User-Agent
+    configureClient: (_, client) => client.DefaultRequestHeaders.UserAgent.ParseAdd("PetHealthEcosystem-HealthCheck"));
 
 // =====================================================================
 // 8. OPENTELEMETRY - TRACING E MÉTRICAS

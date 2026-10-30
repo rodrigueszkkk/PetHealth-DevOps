@@ -71,8 +71,8 @@ Nesta Sprint a API foi levada para a nuvem com **CI/CD no Azure DevOps**: todo c
 
 | Item | Valor |
 | :--- | :--- |
-| Servidor | `sql-pethealth-564578.database.windows.net` |
-| Banco | `PetHealthDb` (Basic) |
+| Servidor | `sql-pethealth-db-564578.database.windows.net` |
+| Banco | `PetHealthDb` (Basic) — região Central US (East US não aceita novos servidores Azure SQL na assinatura Students) |
 | Tabela | `PETS` (criada pela migração `InitialCreate` do EF Core quando a API sobe) |
 | Acesso | Firewall: serviços do Azure (Web App) + IP do desenvolvedor |
 
@@ -129,7 +129,7 @@ Arquivo: [`azure-pipelines.yml`](azure-pipelines.yml)
 | :--- | :---: | :--- |
 | `NOME_WEBAPP` | não | `pethealth-api-564578` |
 | `ASPNETCORE_ENVIRONMENT` | não | `Production` |
-| `SQL_CONNECTION` | 🔒 sim | `Server=tcp:sql-pethealth-564578.database.windows.net,1433;Initial Catalog=PetHealthDb;User ID=...;Password=...;Encrypt=True;` |
+| `SQL_CONNECTION` | 🔒 sim | `Server=tcp:sql-pethealth-db-564578.database.windows.net,1433;Initial Catalog=PetHealthDb;User ID=...;Password=...;Encrypt=True;` |
 | `JWT_SECRET` | 🔒 sim | chave com no mínimo 32 caracteres |
 
 Service Connection (Azure Resource Manager): **`MyAzureSubscription`**.
@@ -151,7 +151,7 @@ dotnet test PetHealthEcosystem.sln -c Release
 
 ## 7. Infraestrutura (Azure CLI)
 
-Scripts em [`infra/`](infra), executados no **Cloud Shell (Bash)** ou Git Bash com Azure CLI:
+Recursos criados: Resource Group e Web App em **East US**, Azure SQL em **Central US**. Scripts em [`infra/`](infra), executados no **Cloud Shell (Bash)** ou Git Bash com Azure CLI:
 
 | Script | O que cria |
 | :--- | :--- |
