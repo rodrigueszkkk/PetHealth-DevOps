@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+logs/
+.vs/
+*.log
+
+# Segredos gerados pelos scripts de infraestrutura
+infra/.segredos.env
+TestResults/
