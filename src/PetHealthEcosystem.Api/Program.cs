@@ -233,7 +233,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Rota de boas-vindas - somente GET em /wellcome
-app.MapGet("/wellcome", () => Results.Text("PetHealthEcosystem API - Sprint 4 DevOps"))
+app.MapGet("/wellcome", () => Results.Text("PetHealthEcosystem API - Sprint 4 DevOps - Versão do Video"))
    .WithName("Wellcome")
    .WithTags("Health")
    .Produces<string>(StatusCodes.Status200OK);
